@@ -1,29 +1,28 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
+// import logo from './logo.svg';
 import './App.css';
+import Home from './pages/Home';
+import List from './pages/List';
 
-function App() {
-  constructor(props) {
-    super(props);
-    this.state = { apiResponse: "" };
 
-  }
-  callAPI() {
-    fest("http://localhost:9000/testAPI")
-    .then(res => res.text())
-    .then(res => this.setState({ apiResponse: res }));
-    .catch(err => err);
-  }
+class App extends Component {
+  render() {
+    const App = () => (
+      <div>
+        <Switch>
+          <Route exact path='/' component={Home}/>
+          <Route path='/list' component={List}/>
+        </Switch>
+      </div>
+    )
+    return (
+    <Switch>
+      <App/>
+      </Switch>
+    );
+  }  
 
-  componenentWillMount() {
-    this.callAPI();
-  }
-
-  return (
-    <div className="App">
-      <p className="App-intro">;{this.state.apiResponse}</p>
-    </div>
-  );
 }
 
 export default App;
