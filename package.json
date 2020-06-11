@@ -1,0 +1,11 @@
+{
+  "name": "rachelfications",
+  "version": "1.0.0",
+  "description": "Rachel's Command Center Notifications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Josh Leong",
+  "license": "MIT"
+}
