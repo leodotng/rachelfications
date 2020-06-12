@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import '../App.css';
+
 
 class List extends Component {
     // Initialize the state
@@ -31,7 +33,7 @@ class List extends Component {
                         {/* Render the list of items */}
                         {list.map((item) => {
                             return (
-                                <div>
+                                <div className="size">
                                     {item}
                                 </div>
                             );
