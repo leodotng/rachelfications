@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
-
+import { Button, Text } from '@chakra-ui/core';
 
 class List extends Component {
     // Initialize the state
@@ -23,10 +23,13 @@ class List extends Component {
     }
     render() {
         const { list } = this.state;
-
         return (
             <div className="App">
-                <h1>List of Items</h1>
+                <Text textAlign={['left', 'center']}>
+                    <h1>List of Items</h1>
+                </Text>
+                <Button variantColor="teal">My List</Button>
+
                 {/* Check to see if any items are found */}
                 {list.length ? (
                     <div>
@@ -36,6 +39,7 @@ class List extends Component {
                                 <div className="size">
                                     {item}
                                 </div>
+
                             );
                         })}
                     </div>
